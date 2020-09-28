@@ -19,12 +19,12 @@ import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 public class Venda {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "numero_vendas")
-	private String numeroVendas;
+	@Column(name = "numero_venda")
+	private Long numeroVenda;
 
-	@Column(name = "data_vendas")
+	@Column(name = "data_venda")
 	@Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
-	private LocalDate dataVendas;
+	private LocalDate dataVenda;
 
 	@ManyToMany(mappedBy = "venda_mercadoria")
 	private List<Mercadoria> mercadorias;
