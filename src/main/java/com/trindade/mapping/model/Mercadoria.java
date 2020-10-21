@@ -16,7 +16,6 @@ import javax.persistence.Table;
 @Table(name = "mercadoria", schema = "public")
 public class Mercadoria {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "codigo")
 	private Long codigo;
 
